@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p>What is 2 + 3?</p>
+  <input type='radio' name='ans' value='4'> 4<br>
+  <input type='radio' name='ans' value='5' id='correct'> 5<br>
+  <input type='radio' name='ans' value='6'> 6<br>
+  <button onclick="checkAns()">Check answer</button>
+  <p id='result'></p>
+  <script>
+    function checkAns() {
+      if(document.getElementById('correct').checked) {
+        document.getElementById('result').innerText = 'Correct';
+      } else {
+        document.getElementById('result').innerText = 'Try again';
+      }
+    }
+  </script>
+</body>
+</html>

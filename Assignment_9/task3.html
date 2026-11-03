@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type='text' id='noteInput'>
+  <button onclick="localStorage.setItem('note', document.getElementById('noteInput').value)">Save</button>
+  <script>
+    window.onload = function() {
+      const saved = localStorage.getItem('note');
+      if(saved) document.getElementById('noteInput').value = saved;
+    };
+  </script>
+</body>
+</html>
